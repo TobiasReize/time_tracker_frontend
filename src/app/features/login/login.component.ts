@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from '../../services/api-service/api.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +13,26 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class LoginComponent {
 
+  private apiService = inject(ApiService);
+  private router = inject(Router);
+
+
   onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.valid) {
+      const payload = {
+        username: ngForm.value.username,
+        password: ngForm.value.password
+      };
+      this.apiService.postData(environment.config.LOGIN_URL, payload).subscribe({
+        next: data => {
+          console.log('response data: ', data);
+          this.router.navigateByUrl('#');
+        },
+        error: err => {
+          console.log('Error: ', err);
+        }
+      })
+    }
     console.log(ngForm.value);
     ngForm.resetForm();
   }
