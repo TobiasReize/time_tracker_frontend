@@ -1,0 +1,73 @@
+@use '../../../styles/helper';
+@use '../../../styles/layout';
+@use '../../../styles/color';
+@use '../../../styles/distance';
+
+:host {
+    @extend .host;
+}
+
+.summary-container {
+    @extend .dF-column-ai-fs;
+    gap: 32px;
+    width: 100%;
+    padding: 48px;
+    border: 2px solid color.$main-color;
+}
+
+.back-container {
+    @extend .dF-row-cc;
+    gap: 16px;
+    padding: 4px 16px;
+    border-radius: 8px;
+
+    > span {
+        font-size: 22px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: color.$hover-blue;
+    }
+}
+
+.back-icon {
+    width: 32px;
+}
+
+.calendar-container {
+    @extend .dF-column-ai-fs;
+    gap: 8px;
+
+    > label {
+        font-size: 22px;
+    }
+
+    > input {
+        width: 200px;
+        border: 1px solid color.$main-color;
+        border-radius: 4px;
+        padding: 4px 8px;
+        color: color.$main-color;
+    }
+}
+
+.date-time-container {
+    @extend .dF-column-ai-fs;
+    gap: 16px;
+    width: 400px;
+    border: 2px solid color.$main-color;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    > input {
+        width: 100%;
+        border-bottom: 1px solid color.$main-color;
+        padding: 4px 8px;
+        color: color.$main-color;
+    }
+}
+
+.timestamp {
+    padding-left: 8px;
+}

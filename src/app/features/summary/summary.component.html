@@ -1,1 +1,20 @@
-<p>summary works!</p>
+<main class="main-content">
+    <h1>HomeOffice CheckIn - Übersicht Max Mustermann</h1>
+    <div class="summary-container">
+        <div (click)="goBack()" class="back-container">
+            <img class="back-icon" src="icon/back.png" alt="back">
+            <span>Start/Stop</span>
+        </div>
+        <div class="calendar-container">
+            <label for="calendar">Datum wählen:</label>
+            <input [(ngModel)]="selectedDate" type="date" name="calendar" id="calendar">
+        </div>
+        <button class="btn-style" type="button">OK</button>
+        <div class="date-time-container">
+            <input type="date" name="date" id="date" readonly>
+            <div class="timestamp">07:57-12:01 Uhr</div>
+            <div class="timestamp">12:28-14:26 Uhr</div>
+            <div class="timestamp">14:38-17:22 Uhr</div>
+        </div>
+    </div>
+</main>
