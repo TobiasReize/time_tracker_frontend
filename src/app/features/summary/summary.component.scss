@@ -8,9 +8,10 @@
 }
 
 .summary-container {
-    @extend .dF-column-ai-fs;
+    @extend .dF-column-fs;
     gap: 32px;
     width: 100%;
+    min-height: 500px;
     padding: 48px;
     border: 2px solid color.$main-color;
 }
@@ -60,11 +61,10 @@
     padding-top: 8px;
     padding-bottom: 8px;
 
-    > input {
+    > span {
         width: 100%;
         border-bottom: 1px solid color.$main-color;
         padding: 4px 8px;
-        color: color.$main-color;
     }
 }
 

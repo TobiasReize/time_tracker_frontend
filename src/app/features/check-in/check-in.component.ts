@@ -39,7 +39,10 @@ export class CheckInComponent {
 
 
   sendData() {
-    const payload = this.endTime - this.startTime;
+    const payload = {
+      start: this.startTime,
+      end: this.endTime
+    };
     this.apiService.postData(environment.config.TIME_TRACKER_URL, payload).subscribe({
       next: data => {
         console.log('response data: ', data);
