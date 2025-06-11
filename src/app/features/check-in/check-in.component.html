@@ -2,14 +2,14 @@
     <h1>HomeOffice CheckIn - Start</h1>
     <div class="checkin-container">
         <div class="btn-container">
-            <div class="icon-container pa-lft-40" [ngClass]="state === 'stop' ? 'play-icon-stop' : 'play-icon-play'">
+            <div (click)="start()" class="icon-container pa-lft-40" [ngClass]="state === 'stop' ? 'play-icon-stop' : 'play-icon-play'">
                 @if (state === 'stop') {
                     <img class="icon" src="icon/play_green.png" alt="play">
                 } @else {
                     <img class="icon" src="icon/play_white.png" alt="play">
                 }
             </div>
-            <div class="icon-container" [ngClass]="state === 'stop' ? 'stop-icon-stop' : 'stop-icon-play'">
+            <div (click)="stop()" class="icon-container" [ngClass]="state === 'stop' ? 'stop-icon-stop' : 'stop-icon-play'">
                 <img class="icon" src="icon/stop.png" alt="stop">
             </div>
         </div>

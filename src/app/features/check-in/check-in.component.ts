@@ -11,5 +11,24 @@ import { Component } from '@angular/core';
 export class CheckInComponent {
 
   state: 'play' | 'stop' = 'stop';
+  startTime: number = 0;
+  endTime: number = 0;
+
+
+  start() {
+    if (this.state === 'stop') {
+      this.state = 'play';
+      this.startTime = Date.now();
+    }
+  }
+
+
+  stop() {
+    if (this.state === 'play') {
+      this.state = 'stop';
+      this.endTime = Date.now();
+      console.log('Time: ', (this.endTime - this.startTime)/1000, 's');
+    }
+  }
 
 }
