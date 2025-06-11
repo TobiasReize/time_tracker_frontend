@@ -10,7 +10,7 @@
                 <label for="password">Password:</label>
                 <input #password="ngModel" class="login-input" type="password" name="password" id="password" minlength="6" maxlength="30" ngModel required>
             </div>
-            <button class="btn-style m-top-80" type="submit">Login</button>
+            <button [disabled]="username.invalid || password.invalid" class="btn-style m-top-80" type="submit">Login</button>
         </div>
     </form>
 </main>

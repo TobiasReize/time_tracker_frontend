@@ -30,4 +30,11 @@
         cursor: pointer;
         background-color: rgba(83, 148, 238, 0.2);
     }
+
+    &:disabled {
+        color: gray;
+        background-color: #dbd8d8;
+        border: 1px solid #dbd8d8;
+        cursor: default;
+    }
 }
