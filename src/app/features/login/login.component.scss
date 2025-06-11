@@ -1,0 +1,31 @@
+@use '../../../styles/helper';
+@use '../../../styles/layout';
+@use '../../../styles/color';
+@use '../../../styles/distance';
+
+:host {
+    @extend .host;
+}
+
+.login-form {
+    @extend .dF-row-cc;
+    width: 100%;
+    padding: 48px;
+    border: 2px solid color.$main-color;
+}
+
+.form-content {
+    @extend .dF-column-cc;
+}
+
+.label-input-container {
+    @extend .dF-jc-sb;
+    width: 400px;
+}
+
+.login-input {
+    width: 250px;
+    border: 1px solid color.$main-color;
+    padding: 2px 8px;
+}
+

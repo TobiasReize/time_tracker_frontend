@@ -51,3 +51,7 @@ input, textarea {
 textarea {
     resize: none;
 }
+
+h1 {
+    @extend .font-style-1;
+}
