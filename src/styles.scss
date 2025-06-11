@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/typography';
+@use './styles/color';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    @extend .font-style-0;
+    color: color.$main-color;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: color.$main-color;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+input, textarea {
+    color: black;
+    border: unset;
+    outline: unset;
+}
+
+textarea {
+    resize: none;
+}

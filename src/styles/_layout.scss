@@ -1,0 +1,22 @@
+@mixin dFlex($fd: row, $jc: center, $ai: center) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.dF-row-cc {
+    @include dFlex();
+}
+
+.dF-jc-fs {
+    @include dFlex($jc: flex-start);
+}
+
+.dF-jc-sb {
+    @include dFlex($jc: space-between);
+}
+
+.dF-column-cc {
+    @include dFlex($fd: column);
+}
