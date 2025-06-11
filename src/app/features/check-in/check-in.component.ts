@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ApiService } from '../../services/api-service/api.service';
 import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-check-in',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './check-in.component.html',
   styleUrl: './check-in.component.scss'
 })
