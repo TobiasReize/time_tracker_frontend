@@ -26,7 +26,7 @@ export class LoginComponent {
       this.apiService.postData(environment.config.LOGIN_URL, payload).subscribe({
         next: data => {
           console.log('response data: ', data);
-          this.router.navigateByUrl('#');
+          this.router.navigateByUrl('check-in');
         },
         error: err => {
           console.log('Error: ', err);
